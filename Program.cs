@@ -5,10 +5,12 @@ while (money >= 5)
     Console.WriteLine($"Hey, you're poor you only have ${money} in your small wallet.");
     Console.WriteLine("YOU HAVE NO CHOICE.");
     Console.WriteLine("do you want to buy:");
+    Console.ForegroundColor = ConsoleColor.Magenta; // changes the color of the text written to the console after the this line
     Console.WriteLine(" \"Meat\" - 25$,");
     Console.WriteLine(" \"Beans\" -10$, ");
     Console.WriteLine(" \"Juice\" - 7$, ");
     Console.WriteLine(" \"Sugar\" - 5$");
+    Console.ResetColor(); // changes the colour of future text back to normal so the magenta text above will remain magenta but the next line will be default
     var input = Console.ReadLine().ToLower();
     if (input == "beans" && money >= 10)
     {
